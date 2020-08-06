@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  --darkblueopacity: rgba(161, 222, 215, 0.7);
+  --darkblue: rgb(161, 222, 215);
+  --lightblue: rgb(213, 255, 248);
+  --darksand: rgb(246, 230, 181);
+  --lightsand: rgb(255, 244, 210);
+}
+
+body {
+  background-image: url("https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* NAV */
+nav {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4em;
+  margin: 0;
+  display: flex;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom: 3px solid var(--lightsand);
+  border-left: 3px solid var(--lightsand);
+  border-right: 3px solid var(--lightsand);
+}
+
+nav img {
+  height: 3em;
+  margin: auto;
+}
+
+nav img:nth-child(3) {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+/* HERO */
+.hero {
+  margin-top: 3em;
+  text-align: center;
+  color: white;
+  font: 400 30px/1.3 'Oleo Script', Helvetica, sans-serif;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.623);
+}
+
+/* PRODUCTS */
+.products {
+  width: 95%;
+  margin: 1.5em auto;
+  margin-bottom: 0.4em;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+  padding: 0.5em;
+}
+
+.product {
+  margin: 0;
+  padding: 0;
+  border: 2px solid var(--lightblue);
+  background-color: var(--darkblueopacity);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.product h2 {
+  font-size: 1.2em;
+  margin: auto;
+  padding-bottom: 5px;
+  color: var(--lightsand);
+  text-shadow: 1px 2px 2px rgb(82, 82, 82);
+}
+
+.product p {
+  margin: auto;
+  margin-bottom: 0.6em;
+  margin-right: auto;
+  color: white;
+  text-shadow: 1px 2px 2px rgb(82, 82, 82);
+}
+
+.product img {
+  width: 95%;
+  border-radius: 10px;
+  margin: 0.2em auto;
+  border: 2px solid var(--lightblue);
+  margin-bottom: 0.7em;
+}
+
+button {
+  border-radius: 15px;
+  height: 2em;
+  width: 50%;
+  margin: auto;
+  font-size: 0.8em;
+  margin-top: -0.3em;
+  margin-bottom: 1em;
+  text-decoration: none;
+  border: 1px solid var(--darksand);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--darksand);
+  color: white;
+}
+
+/* FOOTER */ 
+footer {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: white;
+  height: 5em;
+  display: flex;
+  border-left: 3px solid var(--lightsand);
+  border-right: 3px solid var(--lightsand);
+  border-top: 3px solid var(--lightsand);
+}
+
+footer a {
+  color: rgb(133, 150, 145);
+}
+
+footer ul {
+  margin: auto;
+  display: flex;
+}
+
+footer i {
+  color: var(--darksand);
+  font-size: 1.8em;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+footer ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  margin: auto;
+  list-style: none;
+  color: rgb(177, 204, 196);
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(79, 92, 92, 0.384);
+}
+
+@media (min-width: 750px) {
+  .products {
+    width: 95%;
+    margin: 9em auto;
+    margin-bottom: 6em;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(5, minmax(50px, 1fr));
+    padding: 0.5em;
+  }
+
+  .product img {
+    width: 98%;
+   }
+  
+  nav img:nth-child(1) {
+    margin-left: 1em;
+  }
+
+  nav img:last-child {
+    margin-right: 1em;
+  }
+
+  .hero {
+    margin-top: 3.3em;
+    text-align: center;
+    color: white;
+    font: 400 70px/1.3 'Oleo Script', Helvetica, sans-serif;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.623);
+  }
+
+}
