@@ -11,12 +11,18 @@
 }
 
 body {
-  background-image: url("https://images.pexels.com/photos/1835718/pexels-photo-1835718.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("https://images.pexels.com/photos/2540634/pexels-photo-2540634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
+  margin-top: 4em;
+  margin-bottom: 5em;
 }
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  color: var(--lightblue);
 }
 
 /* NAV */
@@ -29,11 +35,11 @@ nav {
   height: 4em;
   margin: 0;
   display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.699);
+  border-right: 1px solid rgba(0, 0, 0, 0.699);
+  border-left: 1px solid rgba(0, 0, 0, 0.699);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  border-bottom: 3px solid var(--lightsand);
-  border-left: 3px solid var(--lightsand);
-  border-right: 3px solid var(--lightsand);
 }
 
 nav img {
@@ -48,13 +54,27 @@ nav img:nth-child(3) {
 
 /* HERO */
 .hero {
-  margin-top: 3em;
   text-align: center;
   color: white;
-  font: 400 30px/1.3 'Oleo Script', Helvetica, sans-serif;
+  font: 100 20px/1.3 'Oleo Script', Helvetica, sans-serif;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.623);
+  margin-top: -10em;
+  border: 1px solid red;
+}
+.shop-wrap {
+  background-color: rgba(255, 255, 255, 0.925);
+  width: 80%;
+  margin: auto;
+  border-right: 1px solid rgba(0, 0, 0, 0.699);
+  border-left: 1px solid rgba(0, 0, 0, 0.699);
 }
 
+#collection-component-1596925899569 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* SHOP */
 /* PRODUCTS */
 .products {
   width: 95%;
@@ -121,15 +141,64 @@ button:hover {
 
 /* FOOTER */ 
 footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color: white;
   height: 5em;
   display: flex;
-  border-left: 3px solid var(--lightsand);
-  border-right: 3px solid var(--lightsand);
-  border-top: 3px solid var(--lightsand);
+  border-left: 1px solid rgba(0, 0, 0, 0.699);
+  border-right: 1px solid rgba(0, 0, 0, 0.699);
+  border-top: 1px solid rgba(0, 0, 0, 0.699);
+  transition: 0.6s;
 }
+
+/* hover time */
+footer:hover {
+  height: 7.5em;
+}
+
+footer:hover ul {
+  flex-direction: column;
+  margin: auto;
+}
+
+footer:hover ul li {
+  flex-direction: row;
+  padding: 0;
+}
+
+footer:hover ul li i {
+  width: 1.5em;
+  text-align: center;
+}
+
+footer:hover ul li a {
+  margin: auto;
+  margin-left: 0.5em;
+  width: 7em;
+  content: 'hello';
+}
+
+footer #emailtwo, footer #three {
+  display: none;
+}
+
+footer:hover #emailtwo {
+  display: inline;
+}
+
+footer:hover #email {
+  display: none;
+}
+
+
+
+
+/* hover time */
 
 footer a {
   color: rgb(133, 150, 145);
@@ -145,6 +214,24 @@ footer i {
   font-size: 1.8em;
   margin: auto;
   margin-bottom: 5px;
+}
+
+#emailtwo i {
+  color: rgb(133, 150, 145);
+  font-size: 1.05em;
+  animation: arrow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrow {
+  0% {
+    margin-left: 0;
+  } 50% {
+    margin-left: 0.5em;
+  } 100% {
+    margin-left: 0;
+  }
 }
 
 footer ul li {
@@ -187,6 +274,10 @@ footer ul li {
     color: white;
     font: 400 70px/1.3 'Oleo Script', Helvetica, sans-serif;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.623);
+  }
+
+  #collection-component-1596925899569 {
+    margin-top: 4em;
   }
 
 }

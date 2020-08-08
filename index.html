@@ -17,9 +17,198 @@
     <img src="https://cdn.discordapp.com/attachments/736393082831896590/741072314921254932/horse.png">
   </nav>
 
-  <section class="hero">Healing Horses Naturally, God's Way</section>
+  <div class="shop-wrap">
+    <div id='collection-component-1596925899569'></div>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'jgravelytest.myshopify.com',
+          storefrontAccessToken: '6050efeab651bea4a2a0176fbe3c0af1',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('collection', {
+            id: '212625948839',
+            node: document.getElementById('collection-component-1596925899569'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+      "product": {
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "calc(25% - 20px)",
+              "margin-left": "20px",
+              "margin-bottom": "50px",
+              "width": "calc(25% - 20px)"
+            },
+            "img": {
+              "height": "calc(100% - 15px)",
+              "position": "absolute",
+              "left": "0",
+              "right": "0",
+              "top": "0"
+            },
+            "imgWrapper": {
+              "padding-top": "calc(75% + 15px)",
+              "position": "relative",
+              "height": "0"
+            }
+          },
+          "title": {
+            "font-size": "19px",
+            "color": "#161616"
+          },
+          "button": {
+            "font-size": "16px",
+            "padding-top": "16px",
+            "padding-bottom": "16px",
+            ":hover": {
+              "background-color": "#46b2e3"
+            },
+            "background-color": "#4ec6fc",
+            ":focus": {
+              "background-color": "#46b2e3"
+            },
+            "border-radius": "14px",
+            "padding-left": "38px",
+            "padding-right": "38px"
+          },
+          "quantityInput": {
+            "font-size": "16px",
+            "padding-top": "16px",
+            "padding-bottom": "16px"
+          },
+          "price": {
+            "font-size": "18px",
+            "color": "#202020"
+          },
+          "compareAt": {
+            "font-size": "15.299999999999999px",
+            "color": "#202020"
+          },
+          "unitPrice": {
+            "font-size": "15.299999999999999px",
+            "color": "#202020"
+          }
+        },
+        "text": {
+          "button": "Add to cart"
+        }
+      },
+      "productSet": {
+        "styles": {
+          "products": {
+            "@media (min-width: 601px)": {
+              "margin-left": "-20px"
+            }
+          }
+        }
+      },
+      "modalProduct": {
+        "contents": {
+          "img": false,
+          "imgWithCarousel": true,
+          "button": false,
+          "buttonWithQuantity": true
+        },
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "100%",
+              "margin-left": "0px",
+              "margin-bottom": "0px"
+            }
+          },
+          "button": {
+            "font-size": "16px",
+            "padding-top": "16px",
+            "padding-bottom": "16px",
+            ":hover": {
+              "background-color": "#46b2e3"
+            },
+            "background-color": "#4ec6fc",
+            ":focus": {
+              "background-color": "#46b2e3"
+            },
+            "border-radius": "14px",
+            "padding-left": "38px",
+            "padding-right": "38px"
+          },
+          "quantityInput": {
+            "font-size": "16px",
+            "padding-top": "16px",
+            "padding-bottom": "16px"
+          }
+        },
+        "text": {
+          "button": "Add to cart"
+        }
+      },
+      "cart": {
+        "styles": {
+          "button": {
+            "font-size": "16px",
+            "padding-top": "16px",
+            "padding-bottom": "16px",
+            ":hover": {
+              "background-color": "#46b2e3"
+            },
+            "background-color": "#4ec6fc",
+            ":focus": {
+              "background-color": "#46b2e3"
+            },
+            "border-radius": "14px"
+          }
+        },
+        "text": {
+          "total": "Subtotal",
+          "button": "Checkout"
+        }
+      },
+      "toggle": {
+        "styles": {
+          "toggle": {
+            "background-color": "#4ec6fc",
+            ":hover": {
+              "background-color": "#46b2e3"
+            },
+            ":focus": {
+              "background-color": "#46b2e3"
+            }
+          },
+          "count": {
+            "font-size": "16px"
+          }
+        }
+      }
+    },
+          });
+        });
+      }
+    })();
+    /*]]>*/
+    </script>
+  </div> 
 
-  <section class="products">
+  <!-- <section class="products">
     <div class="product">
       <img src="https://images.pexels.com/photos/2389200/pexels-photo-2389200.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="man do it">
       <h2>Itch Be Gone</h2>
@@ -74,14 +263,16 @@
       <p>$6.99&nbsp;</p>
       <button>Purchase</button>
     </div>
-  </section>
+  </section> -->
+
+
 
   <footer>
     <ul>
-      <li><i class="fas fa-envelope"></i><a href="#">Email</a></li>
-      <li><i class="fas fa-mobile-alt"></i><a href="#">Phone</a></li>
-      <li><i class="fab fa-facebook"></i><a href="#">Facebook</a></li>
-      <li><i class="fab fa-instagram"></i><a href="#">Instagram</a></li>
+      <li><i class="fas fa-mobile-alt"></i><a href="#" id="email">Phone</a><a id="emailtwo">
+        239-438-5308</a></li>
+      <li><i class="fab fa-facebook"></i><a href="https://www.facebook.com/heavenlyhorsehealth/" target="_blank">Facebook</a></li>
+      <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/heavenlyhorsehealth/?hl=en" target="_blank">Instagram</a></li>
     </ul>
   </footer>
 </body>
