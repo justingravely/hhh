@@ -183,6 +183,10 @@ footer:hover ul li a {
   content: 'hello';
 }
 
+footer:hover #third-i {
+  margin-right: 0em; 
+}
+
 footer #emailtwo, footer #three {
   display: none;
 }
@@ -214,6 +218,10 @@ footer i {
   font-size: 1.8em;
   margin: auto;
   margin-bottom: 5px;
+}
+
+#third-i {
+  margin-right: 0.95em;
 }
 
 #emailtwo i {
