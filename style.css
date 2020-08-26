@@ -67,9 +67,16 @@ nav img:nth-child(3) {
   margin: auto;
   border-right: 1px solid rgba(0, 0, 0, 0.699);
   border-left: 1px solid rgba(0, 0, 0, 0.699);
+  display: flex;
 }
 
-#collection-component-1596925899569 {
+.shop-wrap h1 {
+  margin: auto;
+  width: fit-content;
+  font-size: 4em;
+}
+
+#collection-component-1598410543797{
   margin-top: 2em;
   margin-bottom: 2em;
 }
