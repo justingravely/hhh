@@ -12,7 +12,7 @@
 
   <section class="a">
     <img src="https://cdn.discordapp.com/attachments/736393082831896590/748961225194602646/logo.png">
-    <i class="fas fa-arrow-circle-down"></i>
+    <i class="fas fa-arrow-circle-down" id="arrowdown"></i>
     <p>Photo by <a href="https://www.pexels.com/@wildlittlethingsphoto?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Helena Lopes</a> from <a href="https://www.pexels.com/photo/brown-horse-on-grassland-2009696/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Pexels</a></p>
   </section>
 
@@ -238,5 +238,19 @@
   </footer>
 
 
+<script>
+// Initial state
+var scrollPos = 0;
+// adding scroll event
+window.addEventListener('scroll', function(){
+  // detects new state and compares it with the new one
+  if ((document.body.getBoundingClientRect()).top > scrollPos)
+	document.getElementById("arrowdown").style.visibility = "visible";   //To hide the element.
+	else
+  document.getElementById("arrowdown").style.visibility = "hidden";   //To hide the element.;
+	// saves the new position for iteration.
+	scrollPos = (document.body.getBoundingClientRect()).top;
+});
+</script>
 </body>
 </html>
