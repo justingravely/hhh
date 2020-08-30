@@ -53,7 +53,7 @@ nav img:nth-child(3) {
 
 /* SECTION A */
 .a {
- background-image: url("https://images.pexels.com/photos/2009696/pexels-photo-2009696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/749357891810492437/crophe.png");
  background-position: center;
  background-size: cover;
  height: 100vh;
@@ -86,7 +86,7 @@ margin-top: 4em;
   width: 2em;
   left: 50%;
   margin-left: -2em;
-  bottom: 4em;
+  bottom: 3em;
   padding-left: 1.4em;
   font-size: 2em;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.466);
@@ -208,6 +208,10 @@ footer {
   border-right: 1px solid rgba(0, 0, 0, 0.432);
   border-top: 1px solid rgba(0, 0, 0, 0.432);
   transition: 0.6s;
+}
+
+footer ul li:last-child i {
+  color: var(--lightblue);
 }
 
 /* hover time */
@@ -332,7 +336,7 @@ footer ul li {
   }
 
   .a {
-    background-image: url("https://images.pexels.com/photos/2009696/pexels-photo-2009696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/749358368149209088/crophe2.png");
     background-size: cover;
     background-position-y: -1em;
   }
