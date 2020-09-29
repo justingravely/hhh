@@ -25,6 +25,16 @@ a:hover {
   color: var(--lightblue);
 }
 
+/* special */
+.special {
+  padding: 3em;
+  background-color: white;
+  border-right: 1px solid rgba(0, 0, 0, 0.432);
+  border-left: 1px solid rgba(0, 0, 0, 0.432);
+  height: 10em;
+  overflow-y: scroll;
+}
+
 /* NAV */
 nav {
   background-color: white;
@@ -53,7 +63,7 @@ nav img:nth-child(3) {
 
 /* SECTION A */
 .a {
- background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/749357891810492437/crophe.png");
+ background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/749358368149209088/crophe2.png");
  background-position: center;
  background-size: cover;
  height: 100vh;
@@ -65,8 +75,8 @@ nav img:nth-child(3) {
 .a p {
   color: rgba(255, 255, 255, 0.678);
   margin: auto;
-  margin-bottom: 1em;
-  font-size: 0.8em;
+  margin-bottom: 0.3em;
+  font-size: 0.7em;
 }
 
 .a a {
@@ -75,40 +85,47 @@ nav img:nth-child(3) {
 }
 
 .a img {
-width: 100%;
-position: absolute;
-margin-top: 4em;
-}
-
-.a i {
-  color: var(--lightblue);
+  width: 100%;
   position: absolute;
-  width: 2em;
-  left: 50%;
-  margin-left: -2em;
-  bottom: 3em;
-  padding-left: 1.4em;
-  font-size: 2em;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.466);
-  animation: move;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+  margin-top: 4em;
+  animation: fadeIn;
+  animation-duration: 2s;
+  animation-iteration-count: initial;
 }
 
-@keyframes move {
+@keyframes fadeIn {
   0% {
-    padding-bottom: auto;
-  } 50% {
-    padding-bottom: 1em;
+    opacity: 0;
   } 100% {
-    padding-bottom: auto;
+    opacity: 1;
   }
 }
 
+.a #shop-button {
+  color: var(--lightblue);
+  position: absolute;
+  width: 5em;
+  left: 50%;
+  margin-left: -2.5em;
+  bottom: 4.5em;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50px;
+  background-color: var(--darksand);
+  color: rgba(0, 0, 0, 0.623);
+  padding: 10px;
+  font-weight: bold;
+  transition: 1s;
+}
+
+.a #shop-button:hover {
+  background-color: var(--lightblue);
+}
 
 .shop-wrap {
   background-color: rgba(255, 255, 255, 0.925);
-  width: 80%;
+  width: 85%;
   margin: auto;
   padding-top: 2em;
   padding-bottom: 2em;
@@ -123,7 +140,7 @@ margin-top: 4em;
   font-size: 4em;
 }
 
-#collection-component-1598410543797{
+#collection-component-1601418674534{
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -322,30 +339,34 @@ footer ul li {
 @media (min-width: 750px) {
 
   .shop-wrap {
-    width: 50%;
-  }
-
-  .products {
-    width: 95%;
-    margin: 9em auto;
-    margin-bottom: 6em;
-    display: grid;
-    grid-gap: 50px;
-    grid-template-columns: repeat(5, minmax(50px, 1fr));
-    padding: 0.5em;
+    width: 70%;
   }
 
   .a {
     background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/749358368149209088/crophe2.png");
     background-size: cover;
-    background-position-y: -1em;
+    background-position-y: -8em;
   }
 
   .a img {
     width: 35%;
     left: 50%;
     margin-left: -17.5%;
-    margin-top: 12em;
+    margin-top: 8em;
+  }
+
+  .a #shop-button {
+    bottom: 8em;
+    width: 8em;
+    margin-left: -4em;
+    height: 2.5em;
+    display: flex;
+  }
+
+  .a #shop-button span {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
   }
 
   .product img {
@@ -366,10 +387,6 @@ footer ul li {
     color: white;
     font: 400 70px/1.3 'Oleo Script', Helvetica, sans-serif;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.623);
-  }
-
-  #collection-component-1596925899569 {
-    margin-top: 4em;
   }
 
 }
