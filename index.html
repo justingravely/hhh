@@ -12,7 +12,7 @@
 
   <section class="a">
     <img src="https://cdn.discordapp.com/attachments/736393082831896590/748961225194602646/logo.png">
-    <a id="shop-button" href="#nav"><span>Shop</span></a>
+    <button onclick="scrollToMud()" id="shop-button"><span>Shop</span></button>
     <p>Photo by <a href="https://www.pexels.com/@wildlittlethingsphoto?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Helena Lopes</a> from <a href="https://www.pexels.com/photo/brown-horse-on-grassland-2009696/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Pexels</a></p>
   </section>
 
@@ -225,6 +225,114 @@
 })();
 /*]]>*/
 </script>
+
+  <div id="menu" class="menu" style="left: -310px">
+      <i id="x-button" onclick="menu()" class="fas fa-times"></i>
+      <p id="menu-title" onclick="menu()">Menu</p>
+      <div class="menu-list">
+        <ul>
+          <li onclick="scrollToMud(), menu()">Magic Mud</li>
+          <li onclick="scrollToItch(), menu()">Itch Be Gone</li>
+          <li onclick="scrollToClay(), menu()">Face Clay</li>
+          <li onclick="scrollToSalve(), menu()">Heavenly Salve</li>
+          <li onclick="scrollToWoody(), menu()">Woody's Leave In Treatment</li>
+          <li onclick="scrollToBug(), menu()">Bug Off</li>
+          <li onclick="scrollToFast(), menu()">Fast Focus</li>
+          <li onclick="scrollToUltimate(), menu()">Ultimate Gut Support</li>
+          <li onclick="scrollToPain(), menu()">Pain Freeze</li>
+          <li onclick="scrollToHeavenly(), menu()">Heavenly Dreams</li>
+        </ul>
+      </div>
+  </div>
+
+  <div onclick="menu()" id="menu-button">
+    <p>M<br>E<br>N<br>U</p>
+  </div>
+
+  <script>
+
+    // menu 
+    var i = document.getElementById("menu");
+    function menu(){
+      if (i.style.left === "-310px") {
+        i.style.left = "0";
+      } else {
+        i.style.left = "-310px";
+      }
+    }
+
+    // scroll
+    function scrollToMud() {
+      window.scroll({
+        top: 575,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+    function scrollToItch() {
+      window.scroll({
+        top: 900,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+    function scrollToClay() {
+      window.scroll({
+        top: 1235,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+    function scrollToSalve() {
+      window.scroll({
+        top: 1575,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+    function scrollToWoody() {
+      window.scroll({
+        top: 1925,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+    function scrollToBug() {
+      window.scroll({
+        top: 2290,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+    function scrollToFast() {
+      window.scroll({
+        top: 2630,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+    function scrollToUltimate() {
+      window.scroll({
+        top: 2970,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+    function scrollToPain() {
+      window.scroll({
+        top: 3300,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+    function scrollToHeavenly() {
+      window.scroll({
+        top: 3650,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 </section> 
 
   <footer>
@@ -238,19 +346,5 @@
   </footer>
 
 
-<script>
-// Initial state
-var scrollPos = 0;
-// adding scroll event
-window.addEventListener('scroll', function(){
-  // detects new state and compares it with the new one
-  if ((document.body.getBoundingClientRect()).top > scrollPos)
-	document.getElementById("arrowdown").style.visibility = "visible";   //To hide the element.
-	else
-  document.getElementById("arrowdown").style.visibility = "hidden";   //To hide the element.;
-	// saves the new position for iteration.
-	scrollPos = (document.body.getBoundingClientRect()).top;
-});
-</script>
 </body>
 </html>
