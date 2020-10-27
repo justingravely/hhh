@@ -231,18 +231,19 @@
       <p id="menu-title" onclick="menu()">Menu</p>
       <div class="menu-list">
         <ul>
-          <li onclick="scrollToMud(), menu()">Magic Mud</li>
-          <li onclick="scrollToItch(), menu()">Itch Be Gone</li>
-          <li onclick="scrollToClay(), menu()">Face Clay</li>
-          <li onclick="scrollToSalve(), menu()">Heavenly Salve</li>
-          <li onclick="scrollToWoody(), menu()">Woody's Leave In Treatment</li>
-          <li onclick="scrollToBug(), menu()">Bug Off</li>
-          <li onclick="scrollToFast(), menu()">Fast Focus</li>
-          <li onclick="scrollToUltimate(), menu()">Ultimate Gut Support</li>
-          <li onclick="scrollToPain(), menu()">Pain Freeze</li>
-          <li onclick="scrollToHeavenly(), menu()">Heavenly Dreams</li>
+          <li onclick="scrollToMud(), menu()">Magic Mud<i class="fas fa-angle-right"></i></li>
+          <li onclick="scrollToItch(), menu()">Itch Be Gone<i class="fas fa-angle-right"></i></li>
+          <li onclick="scrollToClay(), menu()">Face Clay<i class="fas fa-angle-right"></i></li>
+          <li onclick="scrollToSalve(), menu()">Heavenly Salve<i class="fas fa-angle-right"></i></li>
+          <li onclick="scrollToWoody(), menu()">Woody's Leave In Treatment<i class="fas fa-angle-right"></i></li>
+          <li onclick="scrollToBug(), menu()">Bug Off<i class="fas fa-angle-right"></i></li>
+          <li onclick="scrollToFast(), menu()">Fast Focus<i class="fas fa-angle-right"></i></li>
+          <li onclick="scrollToUltimate(), menu()">Ultimate Gut Support<i class="fas fa-angle-right"></i></li>
+          <li onclick="scrollToPain(), menu()">Pain Freeze<i class="fas fa-angle-right"></i></li>
+          <li onclick="scrollToHeavenly(), menu()">Heavenly Dreams<i class="fas fa-angle-right"></i></li>
         </ul>
       </div>
+      <p id="menu-info">Click a product name above to scroll to it</p>
   </div>
 
   <div onclick="menu()" id="menu-button">
@@ -260,6 +261,20 @@
         i.style.left = "-310px";
       }
     }
+
+    // shop button
+    var shopButton = document.getElementById("shop-button");
+    var scrollPos = 0;
+    // adding scroll event
+    window.addEventListener('scroll', function(){
+      // detects new state and compares it with the new one
+      if ((document.body.getBoundingClientRect()).top > scrollPos)
+      shopButton.style.opacity = "1";   //To hide the element.
+      else
+      shopButton.style.opacity = "0";   //To hide the element.;
+      // saves the new position for iteration.
+      scrollPos = (document.body.getBoundingClientRect()).top;
+    });
 
     // scroll
     function scrollToMud() {
