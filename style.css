@@ -107,8 +107,8 @@ nav img:nth-child(3) {
   width: 5em;
   left: 50%;
   margin-left: -2.5em;
-  bottom: 4.5em;
-  font-size: 1.5em;
+  bottom: 1.85em;
+  font-size: 1.8em;
   text-decoration: none;
   text-align: center;
   border-radius: 50px;
@@ -225,7 +225,7 @@ button:hover {
   display: flex;
 }
 
-#menu i {
+#x-button {
   margin-left: 0.77em;
   margin-top: 0.7em;
   color: rgb(82, 82, 82);
@@ -253,6 +253,16 @@ button:hover {
   text-decoration: underline;
 }
 
+.menu-list ul li {
+}
+
+.menu-list ul li i {
+  position: absolute;
+  margin-top: 0.55em;
+  margin-left: 0.5em;
+  opacity: 0.7;
+}
+
 #menu-button {
   width: 2.8em;
   height: 4em;
@@ -271,6 +281,14 @@ button:hover {
   line-height: 0.9em;
   text-align: center;
   margin-top: 0.25em;
+}
+
+#menu-info {
+  margin: auto;
+  bottom: 0.77em;
+  position: absolute;
+  left: 0.7em;
+  opacity: 0.8;
 }
 
 /* FOOTER */ 
