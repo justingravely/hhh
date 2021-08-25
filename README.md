@@ -1,2 +1,2 @@
 # hhh
-Code for girlfriends family business website
+Code for business website
