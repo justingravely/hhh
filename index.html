@@ -252,16 +252,6 @@
 
   <script>
 
-    // menu 
-    var i = document.getElementById("menu");
-    function menu(){
-      if (i.style.left === "-310px") {
-        i.style.left = "0";
-      } else {
-        i.style.left = "-310px";
-      }
-    }
-
     // shop button
     var shopButton = document.getElementById("shop-button");
     var scrollPos = 0;
@@ -275,6 +265,16 @@
       // saves the new position for iteration.
       scrollPos = (document.body.getBoundingClientRect()).top;
     });
+
+    // menu 
+    var i = document.getElementById("menu");
+    function menu(){
+      if (i.style.left === "-310px") {
+        i.style.left = "0";
+      } else {
+        i.style.left = "-310px";
+      }
+    }
 
     // scroll
     function scrollToMud() {
@@ -347,6 +347,9 @@
         behavior: 'smooth'
       });
     }
+
+    alert("Shipping delayed till Nov 1st for orders placed after Oct 23rd");
+
   </script>
 </section> 
 
