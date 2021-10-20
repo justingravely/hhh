@@ -14,6 +14,8 @@ header {
   padding: 40px 100px;
   z-index: 10;
   display: flex;
+  display: none;
+  pointer-events: none;
 }
 
   .menuToggle, .menuToggle2 {
@@ -127,31 +129,6 @@ header {
     color: white;
   }
 
-.socials {
-  position: absolute;
-  z-index: 10;
-  bottom: 15px;
-  left: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-  .socials li {
-    list-style: none;
-  }
-    .socials li a {
-      list-style: none;
-      font-size: 1.5rem;
-      transition: 0.33s;
-    }
-      .socials li a, .socials li a:visited {
-        color: white;
-      }
-      .socials li a:hover {
-        font-size: 1.85rem;
-      }
-
 .menu {
   position: absolute;
   top: 0;
@@ -162,6 +139,8 @@ header {
   justify-content: center;
   align-items: center;
   background-color: white;
+  display: none;
+  pointer-events: none;
 }
 
 .menu ul {
