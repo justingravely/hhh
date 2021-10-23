@@ -117,7 +117,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/woodrotate2.png");
+  background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/901525197868380220/woodrotate2.png");
   background-size: 100%;
   z-index: 10;
   transition: 0.5s;
