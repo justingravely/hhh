@@ -11,11 +11,7 @@
 </head>
 
 <body>
-  <section class="showcase">
-    <header>
-      <i style="display: block" class="fas fa-bars menuToggle"></i>
-      <i style="display: none" class="fas fa-times menuToggle2"></i>
-    </header>
+  <section id="showcase" class="showcase">
     <video src="images/Pexels Videos 2355570.mp4" muted loop autoplay></video>
     <div class="overlay"></div>
     <div class="innerShowcase">
@@ -29,16 +25,19 @@
     </div>
   </section>
 
-  <div class="menu">
+  <div id="menuID" class="menu">
+    <div id="menuToggle" class="menuToggle">
+      <i class="fas fa-bars"></i>
+    </div>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Menu</a></li>
+      <li><a class="menuButton" href="#showcase">Home</a></li>
+      <li><a class="menuButton" href="#topSellers">Mud</a></li>
+      <li><a class="menuButton" href="#store">Shop</a></li>
+      <li><a class="menuButton" id="contact" href="#store">Contact</a></li>
     </ul>
   </div>
 
-  <section class="topSellers">
+  <section id="topSellers" class="topSellers">
 
     <h1 id="psst1">Hey! Psst...</h1>
 
@@ -513,14 +512,13 @@
       <div>
         <a href="https://www.facebook.com/heavenlyhorsehealth/photos/?ref=page_internal" target="_blank"><i
             class="fab fa-facebook-square"></i></a>
-        <p> 239-438-5308 </p>
+        <p id="contactAnimation"> 239-438-5308 </p>
       </div>
       <a id="privacyPolicy" href="privacy.html" target="_blank">Privacy Policy</a>
     </div>
   </section>
 
   <script>
-    var menuToggle = document.querySelector(".menuToggle");
     var showcase = document.querySelector(".showcase");
     var topSellers = document.querySelector(".topSellers");
     var shopbutton = document.getElementById("shopButton");
@@ -528,22 +526,26 @@
     var psst2 = document.getElementById("psst2");
     var scrollMemory = window.scrollY;
     var storeBot = document.getElementById("storeBot");
+    var menuTog = document.getElementById("menuToggle");
+    var menu = document.getElementById("menuID");
+    var contact = document.getElementById("contact");
+    var contactAnimation = document.getElementById("contactAnimation");
+    var menuButton = document.querySelectorAll(".menuButton");
 
-    menuToggle.addEventListener("click", () => { menuToggleFunc() });
     shopButton.addEventListener("click", () => { shopButtonFunc() });
 
     window.addEventListener("scroll", function () {
-      if (window.scrollY > (showcase.offsetTop + showcase.offsetHeight) - 700 && window.scrollY >= scrollMemory) {
+      if (window.scrollY > (showcase.offsetTop + showcase.offsetHeight) - 500 && window.scrollY >= scrollMemory) {
         psst1.style.marginLeft = "3rem"
       }
-      if (window.scrollY < (showcase.offsetTop + showcase.offsetHeight) - 600 && window.scrollY <= scrollMemory) {
+      if (window.scrollY < (showcase.offsetTop + showcase.offsetHeight) - 500 && window.scrollY <= scrollMemory) {
         psst1.style.marginLeft = "-25rem"
       }
 
-      if (window.scrollY > (showcase.offsetTop + showcase.offsetHeight) - 300 && window.scrollY >= scrollMemory) {
+      if (window.scrollY > (showcase.offsetTop + showcase.offsetHeight) - 200 && window.scrollY >= scrollMemory) {
         psst2.style.marginLeft = "-2.2rem"
       }
-      if (window.scrollY < (showcase.offsetTop + showcase.offsetHeight) - 300 && window.scrollY <= scrollMemory) {
+      if (window.scrollY < (showcase.offsetTop + showcase.offsetHeight) - 200 && window.scrollY <= scrollMemory) {
         psst2.style.marginLeft = "-35rem"
       }
 
@@ -559,22 +561,27 @@
       scrollMemory = window.scrollY;
     });
 
-    function menuToggleFunc() {
-      if (menuToggle.classList.contains("fa-bars")) {
-        menuToggle.classList.remove("fa-bars");
-        menuToggle.classList.add("fa-times");
-        menuToggle.style.right = "-17rem";
-        menuToggle.style.color = "black";
-      } else {
-        menuToggle.classList.remove("fa-times");
-        menuToggle.classList.add("fa-bars");
-        menuToggle.style.right = "2.7rem";
-        menuToggle.style.color = "white";
-      }
-      showcase.classList.toggle("active");
+    menuTog.addEventListener("click", () => {
+      menu.classList.toggle('active');
+    });
+
+    contact.addEventListener("click", () => {
+      contactAnimation.classList.toggle('contactA');
+      setTimeout(() => {
+        contactAnimation.classList.toggle('contactA');
+      }, 3000)
+    });
+
+    for(let i = 0; i < menuButton.length; i++) {
+      menuButton[i].addEventListener("click", () => {
+        menu.classList.toggle('active');
+      })
     }
 
-    alert("Shipping delayed till Nov 1st for orders placed after Oct 23rd");
+
+
+    // alert("Shipping delayed till Nov 1st for orders placed after Oct 23rd");
+
 
   </script>
 </body>

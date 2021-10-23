@@ -6,30 +6,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 10;
-  display: flex;
-  display: none;
-  pointer-events: none;
-}
-
-  .menuToggle, .menuToggle2 {
-    position: absolute;
-    cursor: pointer;
-    color: white;
-    font-size: 2rem;
-    right: 2.7rem;
-    top: 2.2rem;
-  }
-    .menuToggle2 {
-      display: none;
-    }
-
 .showcase {
   position: absolute;
   right: 0;
@@ -112,7 +88,8 @@ header {
 .innerShowcase a {
   display: inline-block;
   font-size: 1em;
-  background: #fff;
+  background: #ddcfa3;
+  border-radius: 3px;
   padding: 10px 30px;
   text-transform: uppercase;
   text-decoration: none;
@@ -128,20 +105,26 @@ header {
     background: black;
     color: white;
   }
+  
+  /* menu */
 
 .menu {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
-  width: 300px;
+  right: -320px;
+  width: 320px;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  display: none;
-  pointer-events: none;
+  background-image: url("/images/woodrotate.png");
+  background-size: 100%;
+  z-index: 10;
+  transition: 0.5s;
 }
+  .menu.active {
+    right: 0;
+  }
 
 .menu ul {
   position: relative;
@@ -153,13 +136,33 @@ header {
 
 .menu ul li a {
   text-decoration: none;
-  font-size: 24px;
+  font-size: 28px;
   color: #111;
 }
 
 .menu ul li a:hover {
   color: #03a9f4;
 }
+
+.menuToggle {
+    position: absolute;
+    bottom: 10rem;
+    left: -2.75rem;
+    background-color: #fae9b3;
+    width: 45px;
+    height: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+}
+  .menuToggle i {
+    margin: auto;
+  }
+  .menuToggle:hover {
+    cursor: pointer;
+  }
+
+
 
 /* Top Sellers */
 .topSellers {
@@ -205,7 +208,7 @@ header {
   #mud {
     color: rgb(0, 183, 255);
     animation-name: mudColor;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
   }
   @keyframes mudColor {
@@ -289,6 +292,23 @@ header {
         margin: auto;
         margin-top: 0.8rem;
       }
+      #storeBot p.contactA {
+        animation: contact;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+      }
+      @keyframes contact {
+        0% {
+          color: black;
+        }
+        50% {
+          color: rgb(0, 183, 255);
+        } 100% {
+          color: black;
+        }
+      }
   
     #privacyPolicy {
       text-decoration: none;
@@ -307,6 +327,7 @@ header {
       display: flex;
     }
 
+/* general mobile */
 @media (max-width: 991px) {
   .showcase, .showcase header {
     padding: 40px;
@@ -319,24 +340,21 @@ header {
   }
 }
 
-@media (max-width: 600px) {
-  .showcase, .showcase header {
-    padding: 40px;
-  }
-  .innerShowcase h2 {
-    font-size: 3em;
-  }
-  .innerShowcase h3 {
-    font-size: 2em;
-  }
+/* remove menu when shop has 3 columns */
+@media (min-width: 900px) {
+ .menu, .menuToggle, .menuToggle2 {
+   display: none;
+ }
 }
 
+/* logo tuning */
 @media (min-width: 700px) {
   .innerShowcase .logo {
     width: 65%;
   }
 }
 
+/* general mobile */
 @media (max-width: 700px) {
   #psst1 {
     font-size: 3rem;
@@ -344,8 +362,22 @@ header {
   #psst2 {
     font-size: 1.5rem;
   }
+  .showcase, .showcase header {
+    padding: 40px;
+    text-align: center;
+  }
+  .innerShowcase h2 {
+    font-size: 3em;
+  }
+  .innerShowcase h3 {
+    font-size: 2em;
+  }
+  .innerShowcase a {
+    margin: auto;
+  }
 }
 
+/* store bottom white space */
 @media (max-width: 900px) {
   #storeMain {
     padding-bottom: 5rem;
