@@ -7,16 +7,13 @@
 }
 
 .showcase {
-  position: absolute;
-  right: 0;
-  top: 0;
+  background-size: cover;
   width: 100%;
   min-height: 100vh;
   padding: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
   transition: 0.5s;
   z-index: 2;
 }
@@ -24,25 +21,13 @@
     right: 300px;
   }
 
-  .showcase video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #68aece;
-    mix-blend-mode: overlay;
-  }
+.darkBg {
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
+  top: 0;
+  background-color: rgba(17, 17, 17, 0.425)
+}
 
 .innerShowcase {
   position: relative;
@@ -54,7 +39,6 @@
   .innerShowcase .logo {
     color: #fff;
     text-transform: uppercase;
-    cursor: pointer;
     width: 100%;
     margin: auto;
     margin-bottom: 5rem;
@@ -81,8 +65,9 @@
   font-size: 1.1em;
   color: #fff;
   margin: 20px 0;
-  font-weight: 400;
+  font-weight: 500;
   max-width: 700px;
+  text-shadow: 1px 1px 3px black;
 }
 
 .innerShowcase a {
@@ -105,6 +90,79 @@
     background: black;
     color: white;
   }
+
+#gallery {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  background: #b0e6ff;
+  border-radius: 3px;
+  /* change for desktop */
+  padding: 10px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  width: 7rem;
+}
+  #gallery:hover {
+    background: black;
+    color: white;
+  }
+
+#photos {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.568);
+  z-index: 30;
+  display: none;
+  flex-direction: column;
+}
+   #mainImg {
+    width: 90%;
+    height: 25rem;
+    background-image: url("images/gallery/win.jpg");
+    background-size: cover;
+    margin: 4rem auto 0 auto;
+  }
+
+  #photos a {
+    color: white;
+    font-size: 1.33rem;
+    margin: 0.5rem auto 1rem auto;
+  }
+  .thumbnails {
+    margin: 0rem auto auto auto;
+    height: 7rem;
+    width: 95%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: pointer;
+  }
+    .thumbs {
+      flex: 0 0 auto;
+      margin: auto 0.33rem;
+      width: 75px;
+      height: 75px;
+      background-image: url("images/gallery/dog1.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  #photoX {
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
   
   /* menu */
 
@@ -118,6 +176,7 @@
   justify-content: center;
   align-items: center;
   background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/901525197868380220/woodrotate2.png");
+  background-color: white;
   background-size: 100%;
   z-index: 10;
   transition: 0.5s;
@@ -167,66 +226,8 @@
 
 
 
-/* Top Sellers */
-.topSellers {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin-top: 100vh;
-  background-image: url("images/pexels-tim-photoman-9890047.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-  .topSellers h1 {
-    color: white;
-    font-size: 4.5rem;
-    margin: auto;
-    margin-bottom: 3rem;
-    margin-left: -25rem;
-    transition: 1s;
-  }
- .topSellers h2 {
-    color: white;
-    margin: auto;
-    margin-left: 5rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    transition: 1s;
-  }
-    .mudButton {
-      margin: auto;
-      margin-top: 3rem;
-      margin-left: 1.2rem;
-    }
 
-    #psst2 {
-      margin: auto;
-      margin-left: -35rem;
-      font-size: 2rem;
-      margin-top: 0;
-      transition: 0.88s;
-    }
-
-  #mud {
-    color: rgb(0, 183, 255);
-    animation-name: mudColor;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes mudColor {
-    0% {
-      color: rgb(0, 183, 255);
-    }
-    50% {
-      color: white;
-    }
-    100% {
-      color: rgb(0, 183, 255);
-    }
-
-  }
-
+  /* STORE */
   .store {
     display: flex;
     flex-direction: column;
@@ -359,12 +360,7 @@
 
 /* general mobile */
 @media (max-width: 700px) {
-  #psst1 {
-    font-size: 3rem;
-  }
-  #psst2 {
-    font-size: 1.5rem;
-  }
+
   .showcase, .showcase header {
     padding: 40px;
     text-align: center;

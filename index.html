@@ -1,589 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/27a12b435e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Heavenly Horse Health</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/27a12b435e.js" crossorigin="anonymous"></script>
-  <title>Heavenly Horse Health</title>
-</head>
-
-<body>
-  <section id="showcase" class="showcase">
-    <video src="images/Pexels Videos 2355570.mp4" muted loop autoplay></video>
-    <div class="overlay"></div>
-    <div class="innerShowcase">
-
-      <img src="images/logo.png" alt="Heavenly Horse Health logo" class="logo">
-      <h3>Healing Horses God's Way</h3>
-      <p>We are an all natural company using essential oils blended to help your best friend focus, feel good, rest and
-        heal God’s way.</p>
-      <a id="shopButton" href="#store">Shop</a>
-
-    </div>
-  </section>
-
-  <div id="menuID" class="menu">
-    <div id="menuToggle" class="menuToggle">
-      <i class="fas fa-bars"></i>
-    </div>
-    <ul>
-      <li><a class="menuButton" href="#showcase">Home</a></li>
-      <li><a class="menuButton" href="#topSellers">Mud</a></li>
-      <li><a class="menuButton" href="#store">Shop</a></li>
-      <li><a class="menuButton" id="contact" href="#store">Contact</a></li>
-    </ul>
-  </div>
-
-  <section id="topSellers" class="topSellers">
-
-    <h1 id="psst1">Hey! Psst...</h1>
-
-    <div id="psst2">
-      <h2>Just lookin' for <br> <span id="mud">Magic Mud?</span></h2>
-
-      <div class="mudButton" id='product-component-1634733208206'></div>
-      <script type="text/javascript">
-        /*<![CDATA[*/
-        (function () {
-          var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-          if (window.ShopifyBuy) {
-            if (window.ShopifyBuy.UI) {
-              ShopifyBuyInit();
-            } else {
-              loadScript();
-            }
-          } else {
-            loadScript();
-          }
-          function loadScript() {
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = scriptURL;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-            script.onload = ShopifyBuyInit;
-          }
-          function ShopifyBuyInit() {
-            var client = ShopifyBuy.buildClient({
-              domain: 'heavenlyhorsehealthshop.myshopify.com',
-              storefrontAccessToken: '304245765e2c1d022d1063de55bc95d6',
-            });
-            ShopifyBuy.UI.onReady(client).then(function (ui) {
-              ui.createComponent('product', {
-                id: '5643871092902',
-                node: document.getElementById('product-component-1634733208206'),
-                moneyFormat: '%24%7B%7Bamount%7D%7D',
-                options: {
-                  "product": {
-                    "styles": {
-                      "product": {
-                        "@media (min-width: 601px)": {
-                          "max-width": "calc(25% - 20px)",
-                          "margin-left": "20px",
-                          "margin-bottom": "50px"
-                        }
-                      },
-                      "button": {
-                        "font-family": "Montserrat, sans-serif",
-                        "font-weight": "bold",
-                        "font-size": "18px",
-                        "padding-top": "17px",
-                        "padding-bottom": "17px",
-                        "color": "#252525",
-                        ":hover": {
-                          "color": "#252525",
-                          "background-color": "#ddcfa3"
-                        },
-                        "background-color": "#f6e6b5",
-                        ":focus": {
-                          "background-color": "#ddcfa3"
-                        },
-                        "border-radius": "2px",
-                        "padding-left": "36px",
-                        "padding-right": "36px"
-                      },
-                      "quantityInput": {
-                        "font-size": "18px",
-                        "padding-top": "17px",
-                        "padding-bottom": "17px"
-                      }
-                    },
-                    "buttonDestination": "modal",
-                    "contents": {
-                      "img": false,
-                      "title": false,
-                      "price": false,
-                      "options": false
-                    },
-                    "width": "280px",
-                    "text": {
-                      "button": "Sure Am!"
-                    },
-                    "googleFonts": [
-                      "Montserrat"
-                    ]
-                  },
-                  "productSet": {
-                    "styles": {
-                      "products": {
-                        "@media (min-width: 601px)": {
-                          "margin-left": "-20px"
-                        }
-                      }
-                    }
-                  },
-                  "modalProduct": {
-                    "contents": {
-                      "img": false,
-                      "imgWithCarousel": true,
-                      "button": false,
-                      "buttonWithQuantity": true
-                    },
-                    "styles": {
-                      "product": {
-                        "@media (min-width: 601px)": {
-                          "max-width": "100%",
-                          "margin-left": "0px",
-                          "margin-bottom": "0px"
-                        }
-                      },
-                      "button": {
-                        "font-family": "Montserrat, sans-serif",
-                        "font-weight": "bold",
-                        "font-size": "18px",
-                        "padding-top": "17px",
-                        "padding-bottom": "17px",
-                        "color": "#252525",
-                        ":hover": {
-                          "color": "#252525",
-                          "background-color": "#ddcfa3"
-                        },
-                        "background-color": "#f6e6b5",
-                        ":focus": {
-                          "background-color": "#ddcfa3"
-                        },
-                        "border-radius": "2px",
-                        "padding-left": "36px",
-                        "padding-right": "36px"
-                      },
-                      "quantityInput": {
-                        "font-size": "18px",
-                        "padding-top": "17px",
-                        "padding-bottom": "17px"
-                      }
-                    },
-                    "googleFonts": [
-                      "Montserrat"
-                    ],
-                    "text": {
-                      "button": "Add to cart"
-                    }
-                  },
-                  "option": {},
-                  "cart": {
-                    "styles": {
-                      "button": {
-                        "font-family": "Montserrat, sans-serif",
-                        "font-weight": "bold",
-                        "font-size": "18px",
-                        "padding-top": "17px",
-                        "padding-bottom": "17px",
-                        "color": "#252525",
-                        ":hover": {
-                          "color": "#252525",
-                          "background-color": "#ddcfa3"
-                        },
-                        "background-color": "#f6e6b5",
-                        ":focus": {
-                          "background-color": "#ddcfa3"
-                        },
-                        "border-radius": "2px"
-                      }
-                    },
-                    "text": {
-                      "total": "Subtotal",
-                      "button": "Checkout"
-                    },
-                    "googleFonts": [
-                      "Montserrat"
-                    ]
-                  },
-                  "toggle": {
-                    "styles": {
-                      "toggle": {
-                        "font-family": "Montserrat, sans-serif",
-                        "font-weight": "bold",
-                        "background-color": "#f6e6b5",
-                        ":hover": {
-                          "background-color": "#ddcfa3"
-                        },
-                        ":focus": {
-                          "background-color": "#ddcfa3"
-                        }
-                      },
-                      "count": {
-                        "font-size": "18px",
-                        "color": "#252525",
-                        ":hover": {
-                          "color": "#252525"
-                        }
-                      },
-                      "iconPath": {
-                        "fill": "#252525"
-                      }
-                    },
-                    "googleFonts": [
-                      "Montserrat"
-                    ]
-                  }
-                },
-              });
-            });
-          }
-        })();
-      /*]]>*/
-      </script>
-    </div>
-
-  </section>
-
-  <section id="store" class="store">
-    <div id="storeTop">
-      <img src="https://cdn.discordapp.com/attachments/736393082831896590/741072314921254932/horse.png">
-      <img src="https://cdn.discordapp.com/attachments/736393082831896590/740992002576875590/logoremake.png">
-      <img src="https://cdn.discordapp.com/attachments/736393082831896590/741072314921254932/horse.png">
-    </div>
-
-    <div id="storeMain">
-      <div id='collection-component-1634740377030'></div>
-      <script type="text/javascript">
-        /*<![CDATA[*/
-        (function () {
-          var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-          if (window.ShopifyBuy) {
-            if (window.ShopifyBuy.UI) {
-              ShopifyBuyInit();
-            } else {
-              loadScript();
-            }
-          } else {
-            loadScript();
-          }
-          function loadScript() {
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = scriptURL;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-            script.onload = ShopifyBuyInit;
-          }
-          function ShopifyBuyInit() {
-            var client = ShopifyBuy.buildClient({
-              domain: 'heavenlyhorsehealthshop.myshopify.com',
-              storefrontAccessToken: '304245765e2c1d022d1063de55bc95d6',
-            });
-            ShopifyBuy.UI.onReady(client).then(function (ui) {
-              ui.createComponent('collection', {
-                id: '215098163366',
-                node: document.getElementById('collection-component-1634740377030'),
-                moneyFormat: '%24%7B%7Bamount%7D%7D',
-                options: {
-                  "product": {
-                    "styles": {
-                      "product": {
-                        "@media (min-width: 601px)": {
-                          "max-width": "calc(25% - 20px)",
-                          "margin-left": "20px",
-                          "margin-bottom": "50px",
-                          "width": "calc(25% - 20px)"
-                        },
-                        "img": {
-                          "height": "calc(100% - 15px)",
-                          "position": "absolute",
-                          "left": "0",
-                          "right": "0",
-                          "top": "0"
-                        },
-                        "imgWrapper": {
-                          "padding-top": "calc(75% + 15px)",
-                          "position": "relative",
-                          "height": "0"
-                        }
-                      },
-                      "title": {
-                        "color": "#535353"
-                      },
-                      "button": {
-                        "font-family": "Montserrat, sans-serif",
-                        "font-weight": "bold",
-                        "font-size": "18px",
-                        "padding-top": "17px",
-                        "padding-bottom": "17px",
-                        "color": "#484848",
-                        ":hover": {
-                          "color": "#484848",
-                          "background-color": "#ddcfa3"
-                        },
-                        "background-color": "#f6e6b5",
-                        ":focus": {
-                          "background-color": "#ddcfa3"
-                        },
-                        "border-radius": "2px",
-                        "padding-left": "31px",
-                        "padding-right": "31px"
-                      },
-                      "quantityInput": {
-                        "font-size": "18px",
-                        "padding-top": "17px",
-                        "padding-bottom": "17px"
-                      },
-                      "price": {
-                        "font-size": "18px",
-                        "color": "#464646"
-                      },
-                      "compareAt": {
-                        "font-size": "15.299999999999999px",
-                        "color": "#464646"
-                      },
-                      "unitPrice": {
-                        "font-size": "15.299999999999999px",
-                        "color": "#464646"
-                      }
-                    },
-                    "buttonDestination": "modal",
-                    "contents": {
-                      "options": false
-                    },
-                    "text": {
-                      "button": "View Product"
-                    },
-                    "googleFonts": [
-                      "Montserrat"
-                    ]
-                  },
-                  "productSet": {
-                    "styles": {
-                      "products": {
-                        "@media (min-width: 601px)": {
-                          "margin-left": "-20px"
-                        }
-                      }
-                    }
-                  },
-                  "modalProduct": {
-                    "contents": {
-                      "img": false,
-                      "imgWithCarousel": true,
-                      "button": false,
-                      "buttonWithQuantity": true
-                    },
-                    "styles": {
-                      "product": {
-                        "@media (min-width: 601px)": {
-                          "max-width": "100%",
-                          "margin-left": "0px",
-                          "margin-bottom": "0px"
-                        }
-                      },
-                      "button": {
-                        "font-family": "Montserrat, sans-serif",
-                        "font-weight": "bold",
-                        "font-size": "18px",
-                        "padding-top": "17px",
-                        "padding-bottom": "17px",
-                        "color": "#484848",
-                        ":hover": {
-                          "color": "#484848",
-                          "background-color": "#ddcfa3"
-                        },
-                        "background-color": "#f6e6b5",
-                        ":focus": {
-                          "background-color": "#ddcfa3"
-                        },
-                        "border-radius": "2px",
-                        "padding-left": "31px",
-                        "padding-right": "31px"
-                      },
-                      "quantityInput": {
-                        "font-size": "18px",
-                        "padding-top": "17px",
-                        "padding-bottom": "17px"
-                      },
-                      "title": {
-                        "font-family": "Helvetica Neue, sans-serif",
-                        "font-weight": "bold",
-                        "font-size": "26px",
-                        "color": "#4c4c4c"
-                      },
-                      "price": {
-                        "font-family": "Helvetica Neue, sans-serif",
-                        "font-weight": "normal",
-                        "font-size": "18px",
-                        "color": "#4c4c4c"
-                      },
-                      "compareAt": {
-                        "font-family": "Helvetica Neue, sans-serif",
-                        "font-weight": "normal",
-                        "font-size": "15.299999999999999px",
-                        "color": "#4c4c4c"
-                      },
-                      "unitPrice": {
-                        "font-family": "Helvetica Neue, sans-serif",
-                        "font-weight": "normal",
-                        "font-size": "15.299999999999999px",
-                        "color": "#4c4c4c"
-                      }
-                    },
-                    "googleFonts": [
-                      "Montserrat"
-                    ],
-                    "text": {
-                      "button": "Add to cart"
-                    }
-                  },
-                  "option": {},
-                  "cart": {
-                    "styles": {
-                      "button": {
-                        "font-family": "Montserrat, sans-serif",
-                        "font-weight": "bold",
-                        "font-size": "18px",
-                        "padding-top": "17px",
-                        "padding-bottom": "17px",
-                        "color": "#484848",
-                        ":hover": {
-                          "color": "#484848",
-                          "background-color": "#ddcfa3"
-                        },
-                        "background-color": "#f6e6b5",
-                        ":focus": {
-                          "background-color": "#ddcfa3"
-                        },
-                        "border-radius": "2px"
-                      }
-                    },
-                    "text": {
-                      "total": "Subtotal",
-                      "button": "Checkout"
-                    },
-                    "googleFonts": [
-                      "Montserrat"
-                    ]
-                  },
-                  "toggle": {
-                    "styles": {
-                      "toggle": {
-                        "font-family": "Montserrat, sans-serif",
-                        "font-weight": "bold",
-                        "background-color": "#f6e6b5",
-                        ":hover": {
-                          "background-color": "#ddcfa3"
-                        },
-                        ":focus": {
-                          "background-color": "#ddcfa3"
-                        }
-                      },
-                      "count": {
-                        "font-size": "18px",
-                        "color": "#484848",
-                        ":hover": {
-                          "color": "#484848"
-                        }
-                      },
-                      "iconPath": {
-                        "fill": "#484848"
-                      }
-                    },
-                    "googleFonts": [
-                      "Montserrat"
-                    ]
-                  }
-                },
-              });
-            });
-          }
-        })();
-/*]]>*/
-      </script>
-    </div>
-    
-    <div id="storeBot">
-      <div>
-        <a href="https://www.facebook.com/heavenlyhorsehealth/photos/?ref=page_internal" target="_blank"><i
-            class="fab fa-facebook-square"></i></a>
-        <p id="contactAnimation"> 239-438-5308 </p>
+  <body>
+    <section id="showcase" class="showcase">
+      <div class="innerShowcase">
+        <img
+          src="images/logo.png"
+          alt="Heavenly Horse Health logo"
+          class="logo"
+        />
+        <h3>Healing Horses God's Way</h3>
+        <p>
+          We are an all natural company using essential oils blended to help
+          your best friend focus, feel good, rest and heal God’s way.
+        </p>
+        <a id="shopButton" href="#store">Shop</a>
+        <a id="gallery">Photos</a>
       </div>
-      <a id="privacyPolicy" href="privacy.html" target="_blank">Privacy Policy</a>
+    </section>
+    <div class="darkBg"></div>
+
+    <div id="photos">
+      <p id="photoX">X</p>
+      <div id="mainImg" alt="img"></div>
+      <a target=" " href="images/gallery/dog1.jpg">Full Size</a>
+      <div class="thumbnails">
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+        <div class="thumbs"></div>
+      </div>
     </div>
-  </section>
 
-  <script>
-    var showcase = document.querySelector(".showcase");
-    var topSellers = document.querySelector(".topSellers");
-    var shopbutton = document.getElementById("shopButton");
-    var psst1 = document.getElementById("psst1");
-    var psst2 = document.getElementById("psst2");
-    var scrollMemory = window.scrollY;
-    var storeBot = document.getElementById("storeBot");
-    var menuTog = document.getElementById("menuToggle");
-    var menu = document.getElementById("menuID");
-    var contact = document.getElementById("contact");
-    var contactAnimation = document.getElementById("contactAnimation");
-    var menuButton = document.querySelectorAll(".menuButton");
+    <div id="menuID" class="menu">
+      <div id="menuToggle" class="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul>
+        <li><a class="menuButton" href="#showcase">Home</a></li>
+        <li><a class="menuButton" href="#store">Shop</a></li>
+        <li><a class="menuButton" id="contact" href="#store">Contact</a></li>
+      </ul>
+    </div>
 
-    shopButton.addEventListener("click", () => { shopButtonFunc() });
+    <section id="store" class="store">
+      <div id="storeTop">
+        <img
+          src="https://cdn.discordapp.com/attachments/736393082831896590/741072314921254932/horse.png"
+        />
+        <img
+          src="https://cdn.discordapp.com/attachments/736393082831896590/740992002576875590/logoremake.png"
+        />
+        <img
+          src="https://cdn.discordapp.com/attachments/736393082831896590/741072314921254932/horse.png"
+        />
+      </div>
 
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > (showcase.offsetTop + showcase.offsetHeight) - 500 && window.scrollY >= scrollMemory) {
-        psst1.style.marginLeft = "3rem"
+      <div id="storeMain">
+        <div id="collection-component-1634740377030"></div>
+        <script type="text/javascript">
+          /*<![CDATA[*/
+          (function () {
+            var scriptURL =
+              "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
+            if (window.ShopifyBuy) {
+              if (window.ShopifyBuy.UI) {
+                ShopifyBuyInit();
+              } else {
+                loadScript();
+              }
+            } else {
+              loadScript();
+            }
+            function loadScript() {
+              var script = document.createElement("script");
+              script.async = true;
+              script.src = scriptURL;
+              (
+                document.getElementsByTagName("head")[0] ||
+                document.getElementsByTagName("body")[0]
+              ).appendChild(script);
+              script.onload = ShopifyBuyInit;
+            }
+            function ShopifyBuyInit() {
+              var client = ShopifyBuy.buildClient({
+                domain: "heavenlyhorsehealthshop.myshopify.com",
+                storefrontAccessToken: "304245765e2c1d022d1063de55bc95d6",
+              });
+              ShopifyBuy.UI.onReady(client).then(function (ui) {
+                ui.createComponent("collection", {
+                  id: "215098163366",
+                  node: document.getElementById(
+                    "collection-component-1634740377030"
+                  ),
+                  moneyFormat: "%24%7B%7Bamount%7D%7D",
+                  options: {
+                    product: {
+                      styles: {
+                        product: {
+                          "@media (min-width: 601px)": {
+                            "max-width": "calc(25% - 20px)",
+                            "margin-left": "20px",
+                            "margin-bottom": "50px",
+                            width: "calc(25% - 20px)",
+                          },
+                          img: {
+                            height: "calc(100% - 15px)",
+                            position: "absolute",
+                            left: "0",
+                            right: "0",
+                            top: "0",
+                          },
+                          imgWrapper: {
+                            "padding-top": "calc(75% + 15px)",
+                            position: "relative",
+                            height: "0",
+                          },
+                        },
+                        title: {
+                          color: "#535353",
+                        },
+                        button: {
+                          "font-family": "Montserrat, sans-serif",
+                          "font-weight": "bold",
+                          "font-size": "18px",
+                          "padding-top": "17px",
+                          "padding-bottom": "17px",
+                          color: "#484848",
+                          ":hover": {
+                            color: "#484848",
+                            "background-color": "#ddcfa3",
+                          },
+                          "background-color": "#f6e6b5",
+                          ":focus": {
+                            "background-color": "#ddcfa3",
+                          },
+                          "border-radius": "2px",
+                          "padding-left": "31px",
+                          "padding-right": "31px",
+                        },
+                        quantityInput: {
+                          "font-size": "18px",
+                          "padding-top": "17px",
+                          "padding-bottom": "17px",
+                        },
+                        price: {
+                          "font-size": "18px",
+                          color: "#464646",
+                        },
+                        compareAt: {
+                          "font-size": "15.299999999999999px",
+                          color: "#464646",
+                        },
+                        unitPrice: {
+                          "font-size": "15.299999999999999px",
+                          color: "#464646",
+                        },
+                      },
+                      buttonDestination: "modal",
+                      contents: {
+                        options: false,
+                      },
+                      text: {
+                        button: "View Product",
+                      },
+                      googleFonts: ["Montserrat"],
+                    },
+                    productSet: {
+                      styles: {
+                        products: {
+                          "@media (min-width: 601px)": {
+                            "margin-left": "-20px",
+                          },
+                        },
+                      },
+                    },
+                    modalProduct: {
+                      contents: {
+                        img: false,
+                        imgWithCarousel: true,
+                        button: false,
+                        buttonWithQuantity: true,
+                      },
+                      styles: {
+                        product: {
+                          "@media (min-width: 601px)": {
+                            "max-width": "100%",
+                            "margin-left": "0px",
+                            "margin-bottom": "0px",
+                          },
+                        },
+                        button: {
+                          "font-family": "Montserrat, sans-serif",
+                          "font-weight": "bold",
+                          "font-size": "18px",
+                          "padding-top": "17px",
+                          "padding-bottom": "17px",
+                          color: "#484848",
+                          ":hover": {
+                            color: "#484848",
+                            "background-color": "#ddcfa3",
+                          },
+                          "background-color": "#f6e6b5",
+                          ":focus": {
+                            "background-color": "#ddcfa3",
+                          },
+                          "border-radius": "2px",
+                          "padding-left": "31px",
+                          "padding-right": "31px",
+                        },
+                        quantityInput: {
+                          "font-size": "18px",
+                          "padding-top": "17px",
+                          "padding-bottom": "17px",
+                        },
+                        title: {
+                          "font-family": "Helvetica Neue, sans-serif",
+                          "font-weight": "bold",
+                          "font-size": "26px",
+                          color: "#4c4c4c",
+                        },
+                        price: {
+                          "font-family": "Helvetica Neue, sans-serif",
+                          "font-weight": "normal",
+                          "font-size": "18px",
+                          color: "#4c4c4c",
+                        },
+                        compareAt: {
+                          "font-family": "Helvetica Neue, sans-serif",
+                          "font-weight": "normal",
+                          "font-size": "15.299999999999999px",
+                          color: "#4c4c4c",
+                        },
+                        unitPrice: {
+                          "font-family": "Helvetica Neue, sans-serif",
+                          "font-weight": "normal",
+                          "font-size": "15.299999999999999px",
+                          color: "#4c4c4c",
+                        },
+                      },
+                      googleFonts: ["Montserrat"],
+                      text: {
+                        button: "Add to cart",
+                      },
+                    },
+                    option: {},
+                    cart: {
+                      styles: {
+                        button: {
+                          "font-family": "Montserrat, sans-serif",
+                          "font-weight": "bold",
+                          "font-size": "18px",
+                          "padding-top": "17px",
+                          "padding-bottom": "17px",
+                          color: "#484848",
+                          ":hover": {
+                            color: "#484848",
+                            "background-color": "#ddcfa3",
+                          },
+                          "background-color": "#f6e6b5",
+                          ":focus": {
+                            "background-color": "#ddcfa3",
+                          },
+                          "border-radius": "2px",
+                        },
+                      },
+                      text: {
+                        total: "Subtotal",
+                        button: "Checkout",
+                      },
+                      googleFonts: ["Montserrat"],
+                    },
+                    toggle: {
+                      styles: {
+                        toggle: {
+                          "font-family": "Montserrat, sans-serif",
+                          "font-weight": "bold",
+                          "background-color": "#f6e6b5",
+                          ":hover": {
+                            "background-color": "#ddcfa3",
+                          },
+                          ":focus": {
+                            "background-color": "#ddcfa3",
+                          },
+                        },
+                        count: {
+                          "font-size": "18px",
+                          color: "#484848",
+                          ":hover": {
+                            color: "#484848",
+                          },
+                        },
+                        iconPath: {
+                          fill: "#484848",
+                        },
+                      },
+                      googleFonts: ["Montserrat"],
+                    },
+                  },
+                });
+              });
+            }
+          })();
+          /*]]>*/
+        </script>
+      </div>
+
+      <div id="storeBot">
+        <div>
+          <a
+            href="https://www.facebook.com/heavenlyhorsehealth/photos/?ref=page_internal"
+            target="_blank"
+            ><i class="fab fa-facebook-square"></i
+          ></a>
+          <p id="contactAnimation">239-438-5308</p>
+        </div>
+        <a id="privacyPolicy" href="privacy.html" target="_blank"
+          >Privacy Policy</a
+        >
+      </div>
+    </section>
+
+    <script>
+      var showcase = document.querySelector(".showcase");
+      var shopbutton = document.getElementById("shopButton");
+      var storeBot = document.getElementById("storeBot");
+      var menuTog = document.getElementById("menuToggle");
+      var menu = document.getElementById("menuID");
+      var contact = document.getElementById("contact");
+      var contactAnimation = document.getElementById("contactAnimation");
+      var menuButton = document.querySelectorAll(".menuButton");
+
+      menuTog.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+
+      contact.addEventListener("click", () => {
+        contactAnimation.classList.toggle("contactA");
+        setTimeout(() => {
+          contactAnimation.classList.toggle("contactA");
+        }, 5000);
+      });
+
+      for (let i = 0; i < menuButton.length; i++) {
+        menuButton[i].addEventListener("click", () => {
+          menu.classList.toggle("active");
+        });
       }
-      if (window.scrollY < (showcase.offsetTop + showcase.offsetHeight) - 500 && window.scrollY <= scrollMemory) {
-        psst1.style.marginLeft = "-25rem"
-      }
 
-      if (window.scrollY > (showcase.offsetTop + showcase.offsetHeight) - 200 && window.scrollY >= scrollMemory) {
-        psst2.style.marginLeft = "-2.2rem"
-      }
-      if (window.scrollY < (showcase.offsetTop + showcase.offsetHeight) - 200 && window.scrollY <= scrollMemory) {
-        psst2.style.marginLeft = "-35rem"
-      }
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 200) {
+          storeBot.style.opacity = "1";
+          storeBot.style.pointerEvents = "all";
+        } else {
+          storeBot.style.opacity = "0";
+          storeBot.style.pointerEvents = "none";
+        }
+      });
 
-      if (window.scrollY > (topSellers.offsetTop + topSellers.offsetHeight) - 720 && window.scrollY >= scrollMemory) {
-        storeBot.style.opacity = "1";
-        storeBot.style.pointerEvents = "all"
-      }
-      if (window.scrollY < (topSellers.offsetTop + topSellers.offsetHeight) - 700 && window.scrollY <= scrollMemory) {
-        storeBot.style.opacity = "0";
-        storeBot.style.pointerEvents = "none"
-      }
-
-      scrollMemory = window.scrollY;
-    });
-
-    menuTog.addEventListener("click", () => {
-      menu.classList.toggle('active');
-    });
-
-    contact.addEventListener("click", () => {
-      contactAnimation.classList.toggle('contactA');
-      setTimeout(() => {
-        contactAnimation.classList.toggle('contactA');
-      }, 3000)
-    });
-
-    for(let i = 0; i < menuButton.length; i++) {
-      menuButton[i].addEventListener("click", () => {
-        menu.classList.toggle('active');
+      // GALLERY STUFF
+      var gallery = [
+        "win",
+        "2",
+        "dog1",
+        "dog2",
+        "dog3",
+        "dog4",
+        "eat",
+        "field",
+        "hey",
+        "howdy",
+        "lefty",
+        "lick",
+        "monk1",
+        "monkey",
+        "tuna",
+        "mud",
+        "nobug",
+        "scotty",
+        "shoes",
+        "stand",
+        "there",
+        "trail",
+      ];
+      var scBG = [
+        "dog1",
+        "dog4",
+        "eat",
+        "howdy",
+        "lick",
+        "monk1",
+        "mud",
+        "nobug",
+        "shoes",
+        "stand",
+        "win",
+      ];
+      var pics = document.getElementsByClassName("thumbs");
+      var mainImg = document.getElementById("mainImg");
+      var photoX = document.getElementById("photoX");
+      var photos = document.getElementById("photos");
+      var galleryButton = document.getElementById("gallery");
+      galleryButton.addEventListener("click", ()=>{
+        photos.style.display = "flex";
       })
-    }
+      photoX.addEventListener("click", ()=>{
+        photos.style.display = "none";
+      })
+
+      pics[1].style.backgroundImage = "url('images/gallery/" + gallery[Math.floor(Math.random() * gallery.length)] + ".jpg')";
+      for (let i = 0; i < pics.length; i++) {
+        pics[i].style.backgroundImage = "url('images/gallery/" + gallery[i] + ".jpg')";
+        pics[i].addEventListener("click", ()=>{
+          mainImg.style.backgroundImage =
+          "url('images/gallery/" + gallery[i] + ".jpg')";
+        })
+      }
 
 
+      setInterval(() => {
+        let randomNumber = Math.floor(Math.random() * scBG.length);
+        showcase.style.backgroundImage =
+          "url('images/gallery/BG/" + scBG[randomNumber] + ".jpg')";
+        console.log(randomNumber);
+      }, 7000);
+      showcase.style.backgroundImage =
+          "url('images/gallery/BG/" + scBG[Math.floor(Math.random() * scBG.length)] + ".jpg')";
 
-    alert("Shipping delayed till Nov 1st for orders placed after Oct 23rd");
-
-
-  </script>
-</body>
-
+      
+    </script>
+  </body>
 </html>
