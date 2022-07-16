@@ -34,10 +34,8 @@
     <div id="photos">
       <p id="photoX">X</p>
       <div id="mainImg" alt="img"></div>
-      <a target=" " href="images/gallery/dog1.jpg">Full Size</a>
+      <a id="fullSize" target=" " href="images/gallery/win.jpg">Full Size</a>
       <div class="thumbnails">
-        <div class="thumbs"></div>
-        <div class="thumbs"></div>
         <div class="thumbs"></div>
         <div class="thumbs"></div>
         <div class="thumbs"></div>
@@ -67,6 +65,11 @@
       </div>
       <ul>
         <li><a class="menuButton" href="#showcase">Home</a></li>
+        <li>
+          <a id="menuPhotos" class="menuButton" style="cursor: pointer"
+            >Photos</a
+          >
+        </li>
         <li><a class="menuButton" href="#store">Shop</a></li>
         <li><a class="menuButton" id="contact" href="#store">Contact</a></li>
       </ul>
@@ -402,8 +405,6 @@
         "lefty",
         "lick",
         "monk1",
-        "monkey",
-        "tuna",
         "mud",
         "nobug",
         "scotty",
@@ -425,38 +426,77 @@
         "stand",
         "win",
       ];
+      var sCbGdT = [
+        "dog4",
+        "eat",
+        "howdy",
+        "lick",
+        "monk1",
+        "mud",
+        "nobug",
+        "shoes",
+        "stand",
+        "win",
+      ];
+      var deskTopQuery = window.matchMedia("(min-width: 992px)");
       var pics = document.getElementsByClassName("thumbs");
       var mainImg = document.getElementById("mainImg");
       var photoX = document.getElementById("photoX");
       var photos = document.getElementById("photos");
       var galleryButton = document.getElementById("gallery");
-      galleryButton.addEventListener("click", ()=>{
+      var fullSize = document.getElementById("fullSize");
+      var menuPhotos = document.getElementById("menuPhotos");
+      galleryButton.addEventListener("click", () => {
         photos.style.display = "flex";
-      })
-      photoX.addEventListener("click", ()=>{
+      });
+      menuPhotos.addEventListener("click", () => {
+        photos.style.display = "flex";
+      });
+      photoX.addEventListener("click", () => {
         photos.style.display = "none";
-      })
+      });
 
-      pics[1].style.backgroundImage = "url('images/gallery/" + gallery[Math.floor(Math.random() * gallery.length)] + ".jpg')";
+      pics[1].style.backgroundImage =
+        "url('images/gallery/" +
+        gallery[Math.floor(Math.random() * gallery.length)] +
+        ".jpg')";
       for (let i = 0; i < pics.length; i++) {
-        pics[i].style.backgroundImage = "url('images/gallery/" + gallery[i] + ".jpg')";
-        pics[i].addEventListener("click", ()=>{
-          mainImg.style.backgroundImage =
+        pics[i].style.backgroundImage =
           "url('images/gallery/" + gallery[i] + ".jpg')";
-        })
+        pics[i].addEventListener("click", () => {
+          mainImg.style.backgroundImage =
+            "url('images/gallery/" + gallery[i] + ".jpg')";
+          fullSize.href = "images/gallery/" + gallery[i] + ".jpg";
+        });
       }
 
-
       setInterval(() => {
-        let randomNumber = Math.floor(Math.random() * scBG.length);
-        showcase.style.backgroundImage =
-          "url('images/gallery/BG/" + scBG[randomNumber] + ".jpg')";
-        console.log(randomNumber);
+        if (deskTopQuery.matches) {
+          showcase.style.backgroundImage =
+            "url('images/gallery/DTBG/" +
+            sCbGdT[Math.floor(Math.random() * sCbGdT.length)] +
+            ".jpg')";
+          console.log("hi");
+        } else {
+          showcase.style.backgroundImage =
+            "url('images/gallery/BG/" +
+            scBG[Math.floor(Math.random() * scBG.length)] +
+            ".jpg')";
+        }
       }, 7000);
-      showcase.style.backgroundImage =
-          "url('images/gallery/BG/" + scBG[Math.floor(Math.random() * scBG.length)] + ".jpg')";
 
-      
+      if (deskTopQuery.matches) {
+        showcase.style.backgroundImage =
+          "url('images/gallery/DTBG/" +
+          sCbGdT[Math.floor(Math.random() * sCbGdT.length)] +
+          ".jpg')";
+        console.log("hi");
+      } else {
+        showcase.style.backgroundImage =
+          "url('images/gallery/BG/" +
+          scBG[Math.floor(Math.random() * scBG.length)] +
+          ".jpg')";
+      }
     </script>
   </body>
 </html>

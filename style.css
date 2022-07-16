@@ -8,6 +8,7 @@
 
 .showcase {
   background-size: cover;
+  background-position: center;
   width: 100%;
   min-height: 100vh;
   padding: 100px;
@@ -34,6 +35,7 @@
   z-index: 10;
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 
   .innerShowcase .logo {
@@ -42,7 +44,6 @@
     width: 100%;
     margin: auto;
     margin-bottom: 5rem;
-    margin-left: 0;
   }
 
 .innerShowcase h2 {
@@ -64,7 +65,8 @@
 .innerShowcase p {
   font-size: 1.1em;
   color: #fff;
-  margin: 20px 0;
+  margin: 20px auto;
+  text-align: center;
   font-weight: 500;
   max-width: 700px;
   text-shadow: 1px 1px 3px black;
@@ -79,7 +81,7 @@
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
-  margin-top: 10px;
+  margin: 10px auto auto auto;
   color: #111;
   letter-spacing: 2px;
   transition: 0.2s;
@@ -97,8 +99,7 @@
   font-size: 1em;
   background: #b0e6ff;
   border-radius: 3px;
-  /* change for desktop */
-  padding: 10px 0;
+  padding: 10px 1.1rem;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
@@ -125,9 +126,11 @@
 }
    #mainImg {
     width: 90%;
-    height: 25rem;
+    height: 30rem;
     background-image: url("images/gallery/win.jpg");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     margin: 4rem auto 0 auto;
   }
 
