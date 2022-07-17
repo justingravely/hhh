@@ -119,14 +119,14 @@
   top: 0;
   width: 100%;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.568);
+  background-color: rgba(0, 0, 0, 0.795);
   z-index: 30;
   display: none;
   flex-direction: column;
 }
    #mainImg {
     width: 90%;
-    height: 30rem;
+    height: 25rem;
     background-image: url("images/gallery/win.jpg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -137,20 +137,22 @@
   #photos a {
     color: white;
     font-size: 1.33rem;
-    margin: 0.5rem auto 1rem auto;
+    margin: 0.5rem auto 0 auto;
   }
   .thumbnails {
-    margin: 0rem auto auto auto;
-    height: 7rem;
-    width: 95%;
+    justify-content: center;
+    margin: 1rem auto auto auto;
+    height: 20vh;
+    width: 50vw;
     display: flex;
+    flex-wrap: wrap;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: scroll;
     cursor: pointer;
   }
     .thumbs {
       flex: 0 0 auto;
-      margin: auto 0.33rem;
+      margin: 0.33rem;
       width: 75px;
       height: 75px;
       background-image: url("images/gallery/dog1.jpg");
@@ -383,5 +385,13 @@
 @media (max-width: 900px) {
   #storeMain {
     padding-bottom: 5rem;
+  }
+}
+
+/* ipad to phone gallery thumbnail size */
+@media (max-width: 809px) {
+  .thumbnails {
+    height: 20vh;
+    width: 90%;
   }
 }
