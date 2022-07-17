@@ -386,6 +386,26 @@
       var contact = document.getElementById("contact");
       var contactAnimation = document.getElementById("contactAnimation");
       var menuButton = document.querySelectorAll(".menuButton");
+      var thumbNails = document.getElementsByClassName("thumbnails")[0];
+      var thumbScrollTog = false;
+
+      var thumbScroll = () => {
+        setTimeout(() => {
+          let thumbScrollUp = setInterval(() => {
+            thumbNails.scrollTop += 2;
+          }, 10);
+          setTimeout(() => {
+            clearInterval(thumbScrollUp);
+            let thumbScrollDown = setInterval(() => {
+              thumbNails.scrollTop -= 2;
+              setTimeout(() => {
+                clearInterval(thumbScrollDown);
+              }, 1000);
+            }, 10);
+            thumbScrollTog = true;
+          }, 1000);
+        }, 1000);
+      };
 
       menuTog.addEventListener("click", () => {
         menu.classList.toggle("active");
@@ -459,7 +479,7 @@
         "u",
         "v",
         "w",
-        "x"
+        "x",
       ];
       var scBG = [
         "dog1",
@@ -496,6 +516,7 @@
       var menuPhotos = document.getElementById("menuPhotos");
       galleryButton.addEventListener("click", () => {
         photos.style.display = "flex";
+        if (thumbScrollTog == false) thumbScroll();
       });
       menuPhotos.addEventListener("click", () => {
         photos.style.display = "flex";
